@@ -9,6 +9,7 @@ const projects = [
     accentFrom: 'from-indigo-500/10',
     accentTo: 'to-violet-500/10',
     border: 'border-indigo-500/20 hover:border-indigo-500/40',
+    highlight: 'AI + map intelligence for real-time location decisions.',
   },
   {
     title: 'Task Management App',
@@ -20,6 +21,7 @@ const projects = [
     accentFrom: 'from-violet-500/10',
     accentTo: 'to-pink-500/10',
     border: 'border-violet-500/20 hover:border-violet-500/40',
+    highlight: 'Smooth collaboration pipeline with live board updates.',
   },
   {
     title: 'Tinder for Projects',
@@ -31,6 +33,7 @@ const projects = [
     accentFrom: 'from-cyan-500/10',
     accentTo: 'to-blue-500/10',
     border: 'border-cyan-500/20 hover:border-cyan-500/40',
+    highlight: 'Smart matching flow to help builders find the right team.',
   },
   {
     title: 'Traffic Detection System',
@@ -42,28 +45,7 @@ const projects = [
     accentFrom: 'from-emerald-500/10',
     accentTo: 'to-teal-500/10',
     border: 'border-emerald-500/20 hover:border-emerald-500/40',
-  },
-  {
-    title: 'Blog Engine',
-    description:
-      'A CMS-powered blog with markdown support, SEO optimization, and an RSS feed.',
-    tags: ['Next.js', 'MDX', 'Contentlayer'],
-    github: '#',
-    live: '#',
-    accentFrom: 'from-orange-500/10',
-    accentTo: 'to-red-500/10',
-    border: 'border-orange-500/20 hover:border-orange-500/40',
-  },
-  {
-    title: 'CLI Dev Tool',
-    description:
-      'A command-line tool that automates project scaffolding with opinionated defaults.',
-    tags: ['Node.js', 'TypeScript', 'Commander.js'],
-    github: '#',
-    live: null,
-    accentFrom: 'from-slate-600/10',
-    accentTo: 'to-gray-600/10',
-    border: 'border-slate-600/20 hover:border-slate-500/40',
+    highlight: 'Computer vision focused project delivery from idea to deployment.',
   },
 ]
 
@@ -102,55 +84,63 @@ export default function Projects() {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project) => (
-            <div
-              key={project.title}
-              className={`group rounded-xl p-6 bg-gradient-to-br ${project.accentFrom} ${project.accentTo} border ${project.border} transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/20`}
-            >
-              {/* Preview placeholder */}
-              <div className="w-full h-36 rounded-lg bg-slate-800/70 mb-5 flex items-center justify-center text-slate-600 text-xs tracking-widest uppercase">
-                Preview
-              </div>
+        <div className="space-y-10">
+          {projects.map((project, index) => {
+            const frameFirst = index % 2 === 0
 
-              <h3 className="text-base font-semibold text-white mb-2">{project.title}</h3>
-              <p className="text-sm text-gray-400 leading-relaxed mb-4">{project.description}</p>
-
-              {/* Tech tags */}
-              <div className="flex flex-wrap gap-1.5 mb-5">
-                {project.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="text-xs px-2 py-1 bg-slate-800/80 text-gray-400 rounded-md border border-slate-700/50"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-
-              {/* Links */}
-              <div className="flex items-center gap-5">
-                <a
-                  href={project.github}
-                  className="flex items-center gap-1.5 text-sm text-gray-500 hover:text-white transition-colors"
-                  aria-label={`${project.title} source code`}
+            return (
+              <article
+                key={project.title}
+                className="grid md:grid-cols-2 gap-6 md:gap-10 items-stretch"
+              >
+                <div
+                  className={`rounded-2xl p-7 bg-gradient-to-br ${project.accentFrom} ${project.accentTo} border ${project.border} ${frameFirst ? 'md:order-1' : 'md:order-2'}`}
                 >
-                  <GitHubIcon />
-                  Code
-                </a>
-                {project.live && (
-                  <a
-                    href={project.live}
-                    className="flex items-center gap-1.5 text-sm text-gray-500 hover:text-white transition-colors"
-                    aria-label={`${project.title} live demo`}
-                  >
-                    <ExternalLinkIcon />
-                    Live
-                  </a>
-                )}
-              </div>
-            </div>
-          ))}
+                  <div className="h-full min-h-56 rounded-xl border border-slate-700/60 bg-slate-950/60 flex flex-col justify-between p-6">
+                    <p className="text-xs uppercase tracking-[0.2em] text-gray-500">Project Frame</p>
+                    <h3 className="text-2xl font-bold text-white leading-tight">{project.title}</h3>
+                    <p className="text-sm text-indigo-300">{project.highlight}</p>
+                  </div>
+                </div>
+
+                <div className={`${frameFirst ? 'md:order-2' : 'md:order-1'} flex flex-col justify-center`}>
+                  <p className="text-gray-400 leading-relaxed mb-4">{project.description}</p>
+
+                  <div className="flex flex-wrap gap-2 mb-5">
+                    {project.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="text-xs px-2 py-1 bg-slate-800/80 text-gray-400 rounded-md border border-slate-700/50"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="flex items-center gap-5">
+                    <a
+                      href={project.github}
+                      className="flex items-center gap-1.5 text-sm text-gray-500 hover:text-white transition-colors"
+                      aria-label={`${project.title} source code`}
+                    >
+                      <GitHubIcon />
+                      Code
+                    </a>
+                    {project.live && (
+                      <a
+                        href={project.live}
+                        className="flex items-center gap-1.5 text-sm text-gray-500 hover:text-white transition-colors"
+                        aria-label={`${project.title} live demo`}
+                      >
+                        <ExternalLinkIcon />
+                        Live
+                      </a>
+                    )}
+                  </div>
+                </div>
+              </article>
+            )
+          })}
         </div>
       </div>
     </section>

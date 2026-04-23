@@ -1,3 +1,5 @@
+import profileImage from '../../pp.jpg'
+
 const stats = [
   { value: '0+', label: 'Projects' },
   { value: '67+', label: 'Years Coding' },
@@ -10,14 +12,14 @@ export default function About() {
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-16 items-center">
 
-          {/* Image placeholder */}
+          {/* Profile image */}
           <div className="flex justify-center">
             <div className="relative">
-              <div className="w-64 h-64 md:w-80 md:h-80 rounded-2xl bg-gradient-to-br from-indigo-500/10 to-violet-500/10 border border-indigo-500/20 flex items-center justify-center">
-                <div className="w-28 h-28 rounded-full bg-gradient-to-br from-indigo-600/30 to-violet-600/30 border-2 border-indigo-500/40 flex items-center justify-center text-4xl font-bold text-indigo-300">
-                  WJ
-                </div>
-              </div>
+              <img
+                src={profileImage}
+                alt="William Joku"
+                className="w-64 h-64 md:w-80 md:h-80 rounded-2xl object-cover border border-indigo-500/20"
+              />
               {/* Decorative accent boxes */}
               <div className="absolute -bottom-4 -right-4 w-24 h-24 rounded-xl bg-violet-600/10 border border-violet-500/20" />
               <div className="absolute -top-4 -left-4 w-16 h-16 rounded-lg bg-indigo-600/10 border border-indigo-500/20" />
