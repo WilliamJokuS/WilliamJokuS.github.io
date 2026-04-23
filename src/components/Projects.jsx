@@ -1,11 +1,11 @@
 const projects = [
   {
-    title: 'E-Commerce Platform',
+    title: 'Multi-modal AI Geolocation System',
     description:
-      'A full-stack online store with cart, authentication, and Stripe payments. Built with Next.js and PostgreSQL.',
+      'A full-stack website that leverages AI for geolocation services. Built with Next.js and PostgreSQL.',
     tags: ['Next.js', 'TypeScript', 'PostgreSQL', 'Stripe'],
-    github: '#',
-    live: '#',
+    github: 'https://github.com/geoseeer/GeoSeer',
+    live: 'https://geoseeer.com',
     accentFrom: 'from-indigo-500/10',
     accentTo: 'to-violet-500/10',
     border: 'border-indigo-500/20 hover:border-indigo-500/40',
@@ -15,29 +15,29 @@ const projects = [
     description:
       'A Kanban-style productivity app with real-time collaboration powered by WebSockets.',
     tags: ['React', 'Node.js', 'Socket.io', 'MongoDB'],
-    github: '#',
+    github: 'https://github.com/CodyOutcast/TaskTitan',
     live: '#',
     accentFrom: 'from-violet-500/10',
     accentTo: 'to-pink-500/10',
     border: 'border-violet-500/20 hover:border-violet-500/40',
   },
   {
-    title: 'Weather Dashboard',
+    title: 'Tinder for Projects',
     description:
-      'Real-time weather app with interactive charts, location search, and 7-day forecasts.',
-    tags: ['React', 'OpenWeather API', 'Chart.js'],
-    github: '#',
+      'A project matching platform that connects developers with potential collaborators based on project interests and skills.',
+    tags: ['React', 'Node.js', 'Socket.io', 'MongoDB'],
+    github: 'https://github.com/CodyOutcast/Ques',
     live: '#',
     accentFrom: 'from-cyan-500/10',
     accentTo: 'to-blue-500/10',
     border: 'border-cyan-500/20 hover:border-cyan-500/40',
   },
   {
-    title: 'Portfolio Website',
+    title: 'Traffic Detection System',
     description:
       "The very site you're looking at. Designed and built from scratch with React and Tailwind CSS.",
     tags: ['React', 'Vite', 'Tailwind CSS'],
-    github: '#',
+    github: 'https://github.com/WilliamJokuS/traffic-detection',
     live: '#',
     accentFrom: 'from-emerald-500/10',
     accentTo: 'to-teal-500/10',

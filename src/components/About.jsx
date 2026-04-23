@@ -1,7 +1,7 @@
 const stats = [
-  { value: '20+', label: 'Projects' },
-  { value: '3+', label: 'Years Coding' },
-  { value: '5+', label: 'Technologies' },
+  { value: '0+', label: 'Projects' },
+  { value: '67+', label: 'Years Coding' },
+  { value: '6767+', label: 'Technologies' },
 ]
 
 export default function About() {
@@ -38,15 +38,14 @@ export default function About() {
 
             <div className="space-y-4 text-gray-400 leading-relaxed">
               <p>
-                I&apos;m a third-year Computer Science student with a passion for
+                I&apos;m a third-year Computer Science and Engineering student with a passion for
                 building things on the web. I enjoy working across the full
                 stack — from designing clean UIs to engineering scalable
                 back-end systems.
               </p>
               <p>
-                When I&apos;m not coding, you&apos;ll find me exploring new
-                technologies, contributing to open-source projects, or diving
-                into a good book on software architecture.
+                When I&apos;m not coding, you&apos;ll find me sleeping and push rank in Mobile Legends: Bang Bang. 
+                I&apos;m a professional procrastinator, but I always get the job done on time. I&apos;m currently working on my acccount to Mythical Glory, so wish me luck! 
               </p>
             </div>
 
